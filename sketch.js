@@ -5,7 +5,7 @@ let micReady = false;
 let volMin = 0.05; 
 let volMax = 0.5; 
 let freqMin = 170; // graves
-let freqMax = 171; // agudos
+let freqMax = 180; // agudos
 
 let Dibujos = [];
 let duracionDibujo = 10000;
@@ -69,11 +69,11 @@ function draw() {
     d.dibujar();
   }
 
-  calibrar(); // cuando no es necesario se comenta
+  //calibrar(); // cuando no es necesario se comenta
 
   const freq = obtenerFrecuenciaDominante();
   const tipoSonido = freq < 400 ? "Grave" : "Agudo";
-  text(`🎵 Frecuencia: ${nf(freq, 1, 2)} Hz (${tipoSonido})`, 20, 40);
+  //text(`🎵 Frecuencia: ${nf(freq, 1, 2)} Hz (${tipoSonido})`, 20, 40);
 
   if (level > volMin && level < volMax) {
     if (!sonidoActivo) {
